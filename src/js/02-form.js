@@ -23,6 +23,10 @@ form.addEventListener('submit', e => {
     email: form.elements.email.value,
     message: form.elements.message.value,
   };
+  if (formData.email === '' || formData.message === '') {
+    alert('Please fill the form');
+  }
+
   console.log(formData);
 
   localStorage.removeItem(storage);
