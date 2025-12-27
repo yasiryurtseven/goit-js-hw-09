@@ -25,6 +25,7 @@ form.addEventListener('submit', e => {
   };
   if (formData.email === '' || formData.message === '') {
     alert('Please fill the form');
+    return;
   }
 
   console.log(formData);
