@@ -23,7 +23,7 @@ form.addEventListener('submit', e => {
     email: form.elements.email.value,
     message: form.elements.message.value,
   };
-  if (formData.email === '' || formData.message === '') {
+  if (!formData.email.trim() || !formData.message.trim()) {
     alert('Please fill the form');
     return;
   }
